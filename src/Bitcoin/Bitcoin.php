@@ -23,6 +23,12 @@ class Bitcoin
         $this->bitcoin = $rpc;
     }
     
+
+    public static function instance()
+    {
+        return BitcoinFactory::create();
+    }
+    
     /**
      *  function getinfo()
      * Returns an object containing various state info.
