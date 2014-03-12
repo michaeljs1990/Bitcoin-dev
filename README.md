@@ -20,13 +20,9 @@ After running composer install you can start using the api below after including
 
 <pre><code>require_once __DIR__ . '/vendor/autoload.php'; </code></pre>
 
-Set your username, password and connection settings in /src/Bitcoin/BitcoinFactory.php
+To get started include the following code in your project. If you are using another username than bitcoinrpc you can specify after password. If you are not connecting to localhost you can set this after the user paramater. Most people will only need the following however.  <br />
 
-<pre><code>public static function create($user = 'user', $password = 'password', $ip = '127.0.0.1:8332')</code></pre>
-
-To get started include the following code in your project.<br />
-
-<pre><code>$bitcoind = \Bitcoin\Bitcoin::instance();</code></pre>
+<pre><code>$bitcoind = \Bitcoin\Bitcoin::instance('rpcpassword');</code></pre>
 
 Now you can start interacting with bitcoind. Test it out with the following line of code.<br />
 

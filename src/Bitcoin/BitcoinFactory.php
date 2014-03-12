@@ -4,7 +4,7 @@ namespace Bitcoin;
 
 class BitcoinFactory
 {
-    public static function create($user = 'user', $password = 'password', $ip = '127.0.0.1:8332')
+    public static function create($password, $user, $ip)
     {
         $rpc = new JsonRPCClient("http://{$user}:{$password}@{$ip}/");
         return new Bitcoin($rpc);

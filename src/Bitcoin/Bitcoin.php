@@ -1,4 +1,4 @@
-<?php
+<?php namespace Bitcoin;
 
 /**
  *  All methods of this class are derived from the bitcoin API
@@ -8,8 +8,6 @@
  * Date: 12/29/2013
  * Updated: 2/18/2014
  */
-
-namespace Bitcoin;
 
 class Bitcoin
 {
@@ -24,9 +22,9 @@ class Bitcoin
     }
     
 
-    public static function instance()
+    public static function instance($password, $user = "bitcoinrpc", $ip = '127.0.0.1:8332')
     {
-        return BitcoinFactory::create();
+        return BitcoinFactory::create($password, $user, $ip);
     }
     
     /**
